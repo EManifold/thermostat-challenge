@@ -57,7 +57,6 @@ class Thermostat {
   }
 
   energyUsage() {
-
     let lowUsageNums = [];
     let mediumUsageNums = [];
 
