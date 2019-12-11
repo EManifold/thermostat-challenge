@@ -24,19 +24,19 @@ class Thermostat {
     return this.powerSaving.isActive()
   }
 
-  increase(num) {
-    if (this.currentTemperature + num > this.maximumTemperature) {
+  increase() {
+    if (this.currentTemperature + 1 > this.maximumTemperature) {
       throw "Cannot exceed maximum temperature";
     } else {
-      this.currentTemperature += num;
+      this.currentTemperature += 1;
     };
   }
 
-  decrease(num) {
-    if (this.currentTemperature - num < this.minimumTemperature) {
+  decrease() {
+    if (this.currentTemperature - 1 < this.minimumTemperature) {
       throw "Cannot go lower than minimum temperature";
     } else {
-      this.currentTemperature -= num;
+      this.currentTemperature -= 1;
     }
   }
 
