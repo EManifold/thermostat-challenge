@@ -1,0 +1,52 @@
+body {
+  background-color: white;
+}
+
+#thermostat {
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+	margin: 80px auto;
+  width: 400px;
+  overflow: hidden;
+}
+
+#increaseTemp {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid grey;
+  margin-bottom: 20px;
+}
+
+#decreaseTemp {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid grey;
+}
+
+#changeTemps {
+   width: 300px;
+   float: left;
+}
+
+#tempDisplay {
+  float: right;
+}
+
+#PSAndReset {
+  width: 300px;
+}
+
+#reset {
+  float: left;
+}
+
+#powerSaving {
+  float: right;
+}
+
+.card {
+  border: none;
+}

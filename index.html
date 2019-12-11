@@ -2,25 +2,70 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
+    <div id="thermostat" class="container">
 
-    <div id="thermostat">
+        <!-- <div id="changeTemps">
+          <div>
+            <div id="increaseTemp"></div>
+          </div>
+          <div>
+            <div id="decreaseTemp"></div>
+          </div>
+        </div>
 
-      <div id="changeTemps">
-        <button type="submit" id="increaseTemp">+</button>
-        <button type="submit" id="decreaseTemp">-</button>
-      </div>
+        <div id="tempDisplay">
+          <h3></h3>
+        </div>
 
-      <div id="tempDisplay">
-        <h3></h3>
-      </div>
       <p style="color: white">°</p>
 
-      <button id="reset">Reset</button>
-      <button type="submit" id="powerSaving">Power Saving</button>
+      <div id="PSAndReset">
+        <button id="reset">Reset</button>
+        <button type="submit" id="powerSaving">Power Saving</button>
+      </div>
 
+    </div> -->
+
+
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div id="increaseTemp"></div>
+        <div id="decreaseTemp"></div>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div id="tempDisplay"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="card">
+  <div class="card-body">
+    <button id="reset">Reset</button>
+  </div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="card">
+  <div class="card-body">
+    <button type="submit" id="powerSaving">Power Saving</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
     <script language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <script src="js/thermostat.js"></script>
     <script src="js/powerSaving.js"></script>
