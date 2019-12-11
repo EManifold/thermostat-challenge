@@ -52,6 +52,7 @@ class Thermostat {
       this.maximumTemperature = 32;
     } else {
       this.powerSaving.active = true;
+      this.currentTemperature = 25;
       this.maximumTemperature = 25;
     }
   }
@@ -67,7 +68,6 @@ class Thermostat {
         mediumUsageNums.push(num)
       }
     })
-
 
     if (lowUsageNums.includes(this.currentTemperature)) {
       return "low-usage"

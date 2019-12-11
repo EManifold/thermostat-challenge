@@ -1,4 +1,4 @@
-var Thermostat = require('../src/thermostat.js')
+var Thermostat = require('../js/thermostat.js')
 
 describe("Thermostat", () => {
   let testThermostat;
@@ -18,6 +18,13 @@ describe("Thermostat", () => {
       testThermostat.togglePowerSaving()
       expect(testThermostat.powerSavingStatus()).toEqual(true)
     });
+
+    it("goes back down to 25 when power saving turned from off to on", () => {
+      testThermostat.togglePowerSaving()
+      testThermostat.togglePowerSaving()
+      expect(testThermostat.getCurrentTemperature()).toEqual(25)
+    });
+
   });
 
   describe("Temperature", () => {
