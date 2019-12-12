@@ -8,7 +8,8 @@
   <body>
     <div id="thermostat" class="container">
 
-        <!-- <div id="changeTemps">
+      <div id="row1">
+        <div id="changeTemps">
           <div>
             <div id="increaseTemp"></div>
           </div>
@@ -16,72 +17,23 @@
             <div id="decreaseTemp"></div>
           </div>
         </div>
-
-        <div id="tempDisplay">
-          <h3></h3>
-        </div>
-
-      <p style="color: white">°</p>
-
-      <div id="PSAndReset">
-        <button id="reset">Reset</button>
-        <button type="submit" id="powerSaving">Power Saving</button>
-      </div>
-
-    </div> -->
-
-<div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <div id="increaseTemp"></div>
-          <div id="decreaseTemp"></div>
+        <div id="display">
+          <div id="tempDisplay"><h3></h3></div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <div id="tempDisplay"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
+
+      <div id="row2">
+        <div id="bottomLeft">
           <button id="reset">Reset</button>
         </div>
+        <div id="bottomRight">
+          <button type="submit" id="powerSaving">Power Saving</button>
+        </div>
       </div>
-    </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <button type="submit" id="powerSaving">Power Saving</button>
-      </div>
-    </div>
-  </div>
-</div> 
-<!--
-  <div class="d-flex p-2 bd-highlight">
-    <div class="d-flex justify-content-around">
-      1
-    </div>
-    <div class="d-flex justify-content-around">
 
     </div>
-  </div>
-  <div class="d-flex p-2 bd-highlight">
-    <div class="d-flex justify-content-around">
-      3
-    </div>
-    <div class="d-flex justify-content-around">
-      4
-    </div>
-  </div> -->
 
-</div>
+    <!-- <p>5°</p> -->
 
     <script language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
     <script src="js/thermostat.js"></script>
