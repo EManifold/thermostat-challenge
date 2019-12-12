@@ -22,7 +22,24 @@ $(document).ready(function() {
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
     });
 
-    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=bb2a87298eceeff6c09488295024027c`, function(json) {
-      console.log(this.main.temp);
+    var city = $("#city :selected").text();
+    
+    // $("#city").on("keyup",'.searchable', function(){
+    //   // $("#city").(function(){
+    //     city = $(this).val();
+    //     console.log(city);
+    //   // });
+    // });
+
+    $("#city").change(function(){
+      // debugger;
+      console.log(city);
+      city = $(this).val();
+      console.log(city);
+      $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bb2a87298eceeff6c09488295024027c`, function(json) {
+        $('#cityTemp').text(`${Math.round(json.main.temp - 273.15)} °C`);
+      });
     });
+
+
 });
