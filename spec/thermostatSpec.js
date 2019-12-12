@@ -1,5 +1,3 @@
-var Thermostat = require('../js/thermostat.js')
-
 describe("Thermostat", () => {
   let testThermostat;
 

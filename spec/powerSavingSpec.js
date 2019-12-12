@@ -1,26 +1,21 @@
-var PowerSavingUnit = require('../js/powerSaving')
-
 describe("PowerSavingUnit", () => {
-  let testPSUnit = new PowerSavingUnit;
-
-  beforeEach(() => {
-    let testPSUnit = new PowerSavingUnit;
-  });
+  let testPSUnit1 = new PowerSavingUnit;
+  let testPSUnit2 = new PowerSavingUnit;
 
   it("is on by default", () => {
-    expect(testPSUnit.isActive()).toBeTrue();
+    expect(testPSUnit2.isActive()).toBeTrue();
   });
 
   it("can be turned off", () => {
-    testPSUnit.switchOff();
+    testPSUnit1.switchOff();
 
-    expect(testPSUnit.isActive()).toBeFalse();
+    expect(testPSUnit1.isActive()).toBeFalse();
   });
 
   it("can be turned on", () => {
-    testPSUnit.switchOff();
-    testPSUnit.switchOn();
+    testPSUnit1.switchOff();
+    testPSUnit1.switchOn();
 
-    expect(testPSUnit.isActive()).toBeTrue();
+    expect(testPSUnit1.isActive()).toBeTrue();
   });
 });
