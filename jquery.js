@@ -22,4 +22,7 @@ $(document).ready(function() {
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
     });
 
+    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=bb2a87298eceeff6c09488295024027c`, function(json) {
+      console.log(this.main.temp);
+    });
 });

@@ -15,5 +15,3 @@ class PowerSavingUnit {
     this.active = true;
   }
 }
-
-// module.exports = PowerSavingUnit;
