@@ -1,17 +1,32 @@
 $(document).ready(function() {
   let thermostat = new Thermostat
     $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
+    $('#energyUsage').text(`${thermostat.energyUsage()}`);
 
     $('#decreaseTemp').click(function() {
       thermostat.decrease()
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
       $('#energyUsage').text(`${thermostat.energyUsage()}`);
+      if (thermostat.currentTemperature < 18) {
+        $('#energyUsage').css("background-color", "#005e1a");
+      } else if (thermostat.currentTemperature >= 18 && thermostat.currentTemperature < 25) {
+        $('#energyUsage').css("background-color", "#000000");
+      } else {
+        $('#energyUsage').css("background-color", "#a31d1d");
+      };
     });
 
     $('#increaseTemp').click(function() {
       thermostat.increase()
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
       $('#energyUsage').text(`${thermostat.energyUsage()}`);
+      if (thermostat.currentTemperature < 18) {
+        $('#energyUsage').css("background-color", "#005e1a");
+      } else if (thermostat.currentTemperature >= 18 && thermostat.currentTemperature < 25) {
+        $('#energyUsage').css("background-color", "#000000");
+      } else {
+        $('#energyUsage').css("background-color", "#a31d1d");
+      };
     });
 
     $('#reset').click(function() {
