@@ -56,6 +56,11 @@ body {
   box-shadow: 0px 0px 3px 2px rgba(0, 177, 106, 1);
 }
 
+#energyUsage {
+  color: white;
+  background-color: black;
+}
+
 #bottomRight {
   width: 33%;
   margin-top: 25px;
