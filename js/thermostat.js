@@ -45,13 +45,16 @@ class Thermostat {
   }
 
   togglePowerSaving() {
+    console.log(this.powerSaving.active)
     if (this.powerSaving.active) {
       this.powerSaving.active = false;
       this.maximumTemperature = 32;
     } else {
       this.powerSaving.active = true;
-      this.currentTemperature = 25;
       this.maximumTemperature = 25;
+      if (this.currentTemperature > 25) {
+        this.currentTemperature = 25
+      }
     }
   }
 

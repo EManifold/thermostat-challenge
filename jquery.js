@@ -20,9 +20,12 @@ $(document).ready(function() {
     $('#powerSaving').click(function() {
       thermostat.togglePowerSaving()
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
+      if (thermostat.powerSavingStatus()) {
+        $("#powerSaving").css("box-shadow", '0px 0px 3px 2px rgba(0, 177, 106, 1)');
+      } else {
+        $("#powerSaving").css("box-shadow", '0px 0px 3px 2px rgba(240, 52, 52, 1)');
+      };
     });
-
-    // var city = $("#city :selected").text();
 
     $("#city").change(function(){
       var city = $(this).val();
@@ -30,6 +33,4 @@ $(document).ready(function() {
         $('#cityTemp').text(`${Math.round(json.main.temp - 273.15)} °C`);
       });
     });
-
-
 });
