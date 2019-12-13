@@ -19,6 +19,9 @@ describe("Thermostat", () => {
 
     it("goes back down to 25 when power saving turned from off to on", () => {
       testThermostat.togglePowerSaving()
+      for (let i = 0; i < 7; i++) {
+        testThermostat.increase()
+      }
       testThermostat.togglePowerSaving()
       expect(testThermostat.getCurrentTemperature()).toEqual(25)
     });
@@ -111,11 +114,11 @@ describe("Thermostat", () => {
       for (let i = 0; i < 5; i++) {
         testThermostat.decrease();
       }
-      expect(testThermostat.energyUsage()).toEqual("low-usage");
+      expect(testThermostat.energyUsage()).toEqual("Low-usage");
     })
 
     it("should return 'medium-usage' when temperature is less than 25", () => {
-      expect(testThermostat.energyUsage()).toEqual("medium-usage");
+      expect(testThermostat.energyUsage()).toEqual("Medium-usage");
     })
 
     it("should return 'high-usage' when temperature is 25 or more", () => {
@@ -124,7 +127,7 @@ describe("Thermostat", () => {
       for (let i = 0; i < 7; i++) {
         testThermostat.increase();
       }
-      expect(testThermostat.energyUsage()).toEqual("high-usage");
+      expect(testThermostat.energyUsage()).toEqual("High-usage");
     })
   });
 });

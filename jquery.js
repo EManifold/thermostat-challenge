@@ -5,11 +5,13 @@ $(document).ready(function() {
     $('#decreaseTemp').click(function() {
       thermostat.decrease()
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
+      $('#energyUsage').text(`${thermostat.energyUsage()}`);
     });
 
     $('#increaseTemp').click(function() {
       thermostat.increase()
       $('#tempDisplay').text(`${thermostat.getCurrentTemperature()} °C`);
+      $('#energyUsage').text(`${thermostat.energyUsage()}`);
     });
 
     $('#reset').click(function() {
@@ -33,4 +35,6 @@ $(document).ready(function() {
         $('#cityTemp').text(`${Math.round(json.main.temp - 273.15)} °C`);
       });
     });
+
+
 });

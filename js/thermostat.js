@@ -71,11 +71,11 @@ class Thermostat {
     })
 
     if (lowUsageNums.includes(this.currentTemperature)) {
-      return "low-usage"
+      return "Low-usage"
     } else if (mediumUsageNums.includes(this.currentTemperature)) {
-      return "medium-usage"
+      return "Medium-usage"
     } else {
-      return "high-usage"
+      return "High-usage"
     }
   }
 }

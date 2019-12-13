@@ -59,6 +59,7 @@ body {
 #bottomRight {
   width: 33%;
   margin-top: 25px;
+  text-align: center;
 }
 
 #increaseTemp {
