@@ -60,6 +60,7 @@ When the user turns on power saving and the temperature is set above 25 degrees,
 - Sinatra
 - Jasmine
 - JQuery
+- WeatherMap API
 
 ## Project Status
-Project is unfinished as app.rb and a server need to be functioning in order to allow the temperature to stay the same on a page refresh. Styling needs to be developed. Weather could be worked on to include different weather forecasts instead of just temperature. Also different locations. 
+Project is unfinished as app.rb and a server need to be functioning in order to allow the temperature to stay the same on a page refresh. Styling needs to be developed. Weather could be worked on to include different weather forecasts instead of just temperature. Also different locations.
